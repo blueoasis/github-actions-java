@@ -1,4 +1,4 @@
-name: JAVA CI w/ Gradle
+name: CI
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  gradle-cli:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
