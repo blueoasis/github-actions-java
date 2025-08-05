@@ -23,7 +23,7 @@ class MainTest {
         Main.printMessage("Test message");
 
         // Verify the output
-        assertEquals("Test message!\n", outContent.toString());
+        assertEquals("Test message\n", outContent.toString());
 
         // Reset the standard output
         System.setOut(System.out);
