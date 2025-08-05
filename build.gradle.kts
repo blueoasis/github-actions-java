@@ -12,6 +12,7 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine") // 🔹 Added
 }
 
 tasks.jar {
@@ -22,8 +23,12 @@ tasks.jar {
     }
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21)) // 🔹 Added
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
-
-
