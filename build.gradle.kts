@@ -14,6 +14,16 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "com.jason.Main"
+        )
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
+
+
